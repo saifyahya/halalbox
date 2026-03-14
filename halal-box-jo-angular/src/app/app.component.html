@@ -1,0 +1,171 @@
+<div class="page-shell" [dir]="isRtl ? 'rtl' : 'ltr'">
+  <header class="hero-section">
+    <nav class="topbar content-width">
+      <div class="brand-mini">Halal Box Jo</div>
+      <div class="nav-links">
+        <a href="#menu">{{ t.navMenu }}</a>
+        <a href="#family-meals">{{ t.navFamily }}</a>
+        <a href="#contact">{{ t.navContact }}</a>
+      </div>
+      <div class="lang-toggle">
+        <button [class.active]="lang === 'en'" (click)="setLang('en')">EN</button>
+        <button [class.active]="lang === 'ar'" (click)="setLang('ar')">عربي</button>
+      </div>
+    </nav>
+
+    <div class="hero content-width">
+      <div class="hero-copy">
+        <span class="eyebrow">{{ t.heroEyebrow }}</span>
+        <h1>{{ t.heroH1 }}</h1>
+        <p>{{ t.heroDesc }}</p>
+
+        <div class="cta-group">
+          <a class="primary-btn" href="#menu">{{ t.heroCta1 }}</a>
+          <a class="secondary-btn" [href]="contact.phoneHref">{{ t.heroCta2 }}</a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-card">
+            <span class="highlight-label">{{ t.heroPhone }}</span>
+            <strong>{{ contact.phoneDisplay }}</strong>
+          </div>
+          <a class="highlight-card" href="https://maps.app.goo.gl/NZSiESBSgfMcip2L9" target="_blank" rel="noopener noreferrer">
+            <span class="highlight-label">{{ t.heroLocation }}</span>
+            <strong>{{ t.heroLocationText }}</strong>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="logo-card floating-card soft-rotate-left">
+          <img src="assets/images/halal-box-logo.png" alt="Halal Box Jo logo" loading="eager" fetchpriority="high" decoding="sync">
+        </div>
+
+        <div class="floating-food soft-rotate-right">
+          <img src="assets/images/combo-brisket.png" alt="Halal Box Brisket" loading="eager" fetchpriority="high" decoding="sync">
+          <div class="food-glow"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro-strip">
+      <div class="content-width intro-grid">
+        <div class="intro-card">
+          <span class="card-kicker">{{ t.introKicker }}</span>
+          <h2>{{ t.introH2 }}</h2>
+          <p>{{ t.introP }}</p>
+        </div>
+        <div class="intro-card arabic-card">
+          <span class="card-kicker">{{ t.brandKicker }}</span>
+          <h2>{{ t.brandH2 }}</h2>
+          <p>{{ t.brandP }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="content-width">
+        <div class="section-heading">
+          <span class="section-label">{{ t.menuLabel }}</span>
+          <h2>{{ t.menuH2 }}</h2>
+          <p>{{ t.menuP }}</p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card" *ngFor="let item of comboItems">
+            <span class="menu-badge" *ngIf="item.badge">{{ item.badge }}</span>
+            <div class="menu-image-wrap">
+              <img [src]="item.image" [alt]="item.name" loading="lazy" decoding="async" width="260" height="260">
+            </div>
+            <div class="menu-content">
+              <h3>{{ item.name }}</h3>
+              <p>{{ isRtl ? item.descriptionAr : item.description }}</p>
+              <div class="menu-footer">
+                <span class="price">{{ item.price }}</span>
+                <a class="mini-link" [href]="contact.phoneHref">{{ t.menuOrder }}</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section family-section" id="family-meals">
+      <div class="content-width family-layout">
+        <div>
+          <div class="section-heading left-aligned">
+            <span class="section-label">{{ t.familyLabel }}</span>
+            <h2>{{ t.familyH2 }}</h2>
+            <p>{{ t.familyP }}</p>
+          </div>
+
+          <div class="family-cards">
+            <div class="family-card" *ngFor="let meal of familyMeals">
+              <div>
+                <h3>{{ meal.title }}</h3>
+                <p>{{ isRtl ? meal.quantityAr : meal.quantity }}</p>
+              </div>
+              <strong>{{ meal.price }}</strong>
+            </div>
+          </div>
+
+          <div class="add-ons-box">
+            <div class="add-ons-header">
+              <span class="section-label">{{ t.addOnLabel }}</span>
+              <h3>{{ t.addOnH3 }}</h3>
+            </div>
+            <div class="chips-row">
+              <div class="add-on-chip" *ngFor="let addOn of shrimpAddOns">
+                <span>{{ isRtl ? addOn.titleAr : addOn.title }}</span>
+                <strong>{{ addOn.price }}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-card">
+          <img class="showcase-single" src="assets/images/family-meal.png" alt="Family platter" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="content-width contact-layout">
+        <div class="contact-panel glass-panel">
+          <span class="section-label">{{ t.contactLabel }}</span>
+          <h2>{{ t.contactH2 }}</h2>
+          <p>{{ t.contactP }}</p>
+
+          <div class="contact-list">
+            <a class="contact-card" [href]="contact.phoneHref">
+              <span>{{ t.contactPhone }}</span>
+              <strong>{{ contact.phoneDisplay }}</strong>
+            </a>
+
+            <a class="contact-card" href="https://maps.app.goo.gl/NZSiESBSgfMcip2L9" target="_blank" rel="noopener noreferrer">
+              <span>{{ t.contactLocation }}</span>
+              <strong>{{ contact.locationEnglish }}</strong>
+              <small>{{ contact.locationArabic }}</small>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-branding">
+          <img src="assets/images/logo.jpg" alt="Halal Box Jo logo" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="content-width footer-content">
+      <div>
+        <strong>Halal Box Jo</strong>
+        <p>{{ t.footerDesc }}</p>
+      </div>
+      <span>© {{ currentYear }} Halal Box Jo</span>
+    </div>
+  </footer>
+</div>

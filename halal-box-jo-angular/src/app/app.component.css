@@ -1,0 +1,638 @@
+:host {
+  display: block;
+}
+
+.page-shell {
+  background:
+    radial-gradient(circle at top left, rgba(238, 183, 55, 0.16), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(198, 40, 40, 0.12), transparent 20%),
+    #fffaf3;
+  color: #35231a;
+}
+
+.content-width {
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+}
+
+.brand-mini {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #b32b47;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #5d4037;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  min-height: calc(100vh - 90px);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.4rem, 5vw, 4.7rem);
+  line-height: 1;
+  margin: 0.8rem 0 1rem;
+  max-width: 10ch;
+}
+
+.hero-copy p,
+.section-heading p,
+.intro-card p,
+.contact-panel p,
+.menu-content p {
+  color: #6e5a4d;
+  line-height: 1.7;
+}
+
+.eyebrow,
+.section-label,
+.card-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(237, 179, 41, 0.16);
+  color: #c6860a;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.primary-btn,
+.secondary-btn,
+.mini-link {
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 0.95rem 1.35rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #b72445, #df8d0f);
+  color: #ffffff;
+  box-shadow: 0 18px 36px rgba(183, 36, 69, 0.25);
+}
+
+.secondary-btn {
+  background: #ffffff;
+  color: #5d4037;
+  border: 1px solid rgba(93, 64, 55, 0.12);
+}
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.mini-link:hover,
+.contact-card:hover {
+  transform: translateY(-2px);
+}
+
+.hero-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.highlight-card,
+.intro-card,
+.menu-card,
+.family-card,
+.add-ons-box,
+.contact-card,
+.contact-panel,
+.logo-card,
+.showcase-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(141, 110, 99, 0.1);
+  box-shadow: 0 18px 45px rgba(93, 64, 55, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.highlight-card {
+  padding: 1rem 1.25rem;
+  border-radius: 1.25rem;
+  min-width: 180px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.highlight-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #9c7866;
+  margin-bottom: 0.25rem;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 560px;
+}
+
+.logo-card {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  width: min(420px, 80%);
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.logo-card img,
+.contact-branding img {
+  width: 100%;
+  display: block;
+}
+
+.floating-food {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: min(420px, 78%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.floating-food img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.food-glow {
+  position: absolute;
+  inset: 15%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 126, 15, 0.35), transparent 70%);
+}
+
+.soft-rotate-left {
+  transform: rotate(-4deg);
+}
+
+.soft-rotate-right {
+  transform: rotate(5deg);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.intro-card {
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.intro-card h2,
+.section-heading h2,
+.contact-panel h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  margin: 1rem 0;
+  line-height: 1.1;
+}
+
+.arabic-card {
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+}
+
+.left-aligned {
+  text-align: left;
+  margin-left: 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-card {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.menu-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+  background: #b72445;
+  color: #fff;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.menu-image-wrap {
+  background: linear-gradient(180deg, rgba(240, 190, 69, 0.18), rgba(183, 36, 69, 0.06));
+  padding: 1.3rem;
+  display: grid;
+  place-items: center;
+}
+
+.menu-image-wrap img {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(0 22px 30px rgba(93, 64, 55, 0.16));
+}
+
+.menu-content {
+  padding: 1.5rem;
+}
+
+.menu-content h3,
+.family-card h3,
+.add-ons-header h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.3rem;
+}
+
+.menu-footer {
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #b72445;
+}
+
+.mini-link {
+  color: #c6860a;
+  font-weight: 700;
+}
+
+.family-section {
+  background: linear-gradient(180deg, rgba(255, 244, 222, 0.6), rgba(255, 250, 243, 0.9));
+}
+
+.family-layout,
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.family-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.family-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1.5rem;
+  padding: 1.2rem 1.35rem;
+}
+
+.family-card p,
+.contact-card span,
+.contact-card small {
+  color: #8f7565;
+}
+
+.family-card strong,
+.add-on-chip strong {
+  color: #b72445;
+  font-size: 1.3rem;
+}
+
+.add-ons-box {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1.75rem;
+}
+
+.chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.add-on-chip {
+  min-width: 150px;
+  background: linear-gradient(180deg, #f3bb4c, #e1a323);
+  color: #fff;
+  border-radius: 1.5rem;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 18px 35px rgba(225, 163, 35, 0.25);
+}
+
+.add-on-chip span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.showcase-card {
+  position: relative;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: radial-gradient(circle at top, rgba(183, 36, 69, 0.08), transparent 40%), #fff9f1;
+}
+
+.showcase-single {
+  display: block;
+  position: static;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-sizing: border-box;
+}
+
+.contact-section {
+  position: relative;
+}
+
+.contact-panel {
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.contact-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 1.4rem;
+  padding: 1.15rem 1.2rem;
+}
+
+.contact-card strong,
+.footer strong {
+  display: block;
+  margin: 0.3rem 0;
+}
+
+.contact-branding {
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.footer {
+  padding: 1.5rem 0 2.5rem;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(141, 110, 99, 0.15);
+}
+
+@media (max-width: 1024px) {
+  .family-layout,
+  .contact-layout,
+  .intro-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 2rem;
+  }
+}
+
+/* ── Language toggle buttons ── */
+.lang-toggle {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.lang-toggle button {
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(183, 36, 69, 0.25);
+  background: transparent;
+  color: #5d4037;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-toggle button:hover {
+  border-color: #b72445;
+  color: #b72445;
+}
+
+.lang-toggle button.active {
+  background: linear-gradient(135deg, #b72445, #df8d0f);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 16px rgba(183, 36, 69, 0.28);
+}
+
+/* ── RTL adjustments ── */
+[dir='rtl'] .left-aligned {
+  text-align: right;
+  margin-right: 0;
+  margin-left: unset;
+}
+
+[dir='rtl'] .menu-badge {
+  left: auto;
+  right: 1rem;
+}
+
+[dir='rtl'] .logo-card {
+  right: auto;
+  left: 2rem;
+}
+
+/* ── 820px: tablet / large phone ── */
+@media (max-width: 820px) {
+  /* Navbar: brand + lang-toggle on one row, nav-links below */
+  .topbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .lang-toggle {
+    margin-inline-start: auto;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 1.5rem;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+  }
+
+  .logo-card {
+    right: 0;
+    left: auto;
+  }
+
+  .family-layout,
+  .contact-layout,
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-highlights {
+    flex-wrap: wrap;
+  }
+
+  .highlight-card {
+    flex: 1 1 140px;
+  }
+}
+
+/* ── 560px: small phones ── */
+@media (max-width: 560px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .content-width {
+    width: calc(100% - 1.5rem);
+  }
+
+  .hero-copy h1 {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .logo-card {
+    width: min(280px, 75%);
+  }
+
+  .floating-food {
+    width: min(280px, 70%);
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .family-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-on-chip {
+    min-width: 0;
+    flex: 1 1 120px;
+  }
+
+  .chips-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lang-toggle button {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Disable hover lift on touch devices */
+@media (hover: none) {
+  .primary-btn:hover,
+  .secondary-btn:hover,
+  .mini-link:hover,
+  .contact-card:hover,
+  .highlight-card:hover {
+    transform: none;
+  }
+}
