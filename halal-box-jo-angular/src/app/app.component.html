@@ -77,7 +77,7 @@
           <article class="menu-card" *ngFor="let item of comboItems">
             <span class="menu-badge" *ngIf="item.badge">{{ item.badge }}</span>
             <div class="menu-image-wrap">
-              <img [src]="item.image" [alt]="item.name" loading="lazy" decoding="async" width="260" height="260">
+              <img [src]="item.image" [alt]="item.name" loading="eager" fetchpriority="high" decoding="sync" width="260" height="260">
             </div>
             <div class="menu-content">
               <h3>{{ item.name }}</h3>
@@ -126,7 +126,7 @@
         </div>
 
         <div class="showcase-card">
-          <img class="showcase-single" src="assets/images/family-meal.png" alt="Family platter" loading="lazy" decoding="async">
+          <img class="showcase-single" src="assets/images/family-meal.png" alt="Family platter" loading="eager" fetchpriority="high" decoding="sync">
         </div>
       </div>
     </section>
@@ -153,7 +153,7 @@
         </div>
 
         <div class="contact-branding">
-          <img src="assets/images/logo.jpg" alt="Halal Box Jo logo" loading="lazy" decoding="async">
+          <img src="assets/images/halal-box-logo.png" alt="Halal Box Jo logo" loading="eager" fetchpriority="low" decoding="sync">
         </div>
       </div>
     </section>
